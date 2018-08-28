@@ -108,6 +108,7 @@ async def send_error_message(msg):
     for user_id in bot_config.error_users:
         user = await bot.get_user_info(user_id)
         await bot.send_message(user, msg)
+        await bot.send_file(user, 'Geoffrey.log')
 
 
 async def username_update():
