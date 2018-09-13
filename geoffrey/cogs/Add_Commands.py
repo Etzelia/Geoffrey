@@ -109,7 +109,7 @@ class Add_Commands:
                            .format(ctx.message.author.mention))
         except InvalidTunnelError:
             await ctx.send(
-                '{}, **{}** is an invalid tunnel color.'.format(ctx.message.author.mention, tunnel_color))
+                '{}, **{}** is an invalid tunnel identifier.'.format(ctx.message.author.mention, tunnel_color))
 
     @commands.command(pass_context=True)
     @commands.cooldown(5, 60, commands.BucketType.user)
